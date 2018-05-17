@@ -22,12 +22,12 @@ describe('Traveller', function() {
     traveller = new Traveller(journeys);
   });
 
-  xit('should have a collection of journeys', function() {
+  it('should have a collection of journeys', function() {
     const actual = traveller.journeys;
     assert.deepStrictEqual(actual, journeys)
   });
 
-  xit('should be able to get the journeys start locations', function() {
+  it('should be able to get the journeys start locations', function() {
     const actual = [
       journey1.startLocation,
       journey2.startLocation,
@@ -38,7 +38,7 @@ describe('Traveller', function() {
     assert.deepStrictEqual(actual, traveller.getJourneyStartLocations());
   });
 
-  xit('should be able to get the journeys end locations', function() {
+  it('should be able to get the journeys end locations', function() {
     const actual = [
       journey1.endLocation,
       journey2.endLocation,
@@ -49,12 +49,12 @@ describe('Traveller', function() {
     assert.deepStrictEqual(actual, traveller.getJourneyEndLocations());
   });
 
-  xit('should be able to get a list of the modes of transport', function() {
+  it('should be able to get a list of the modes of transport', function() {
     const actual = [ 'train', 'train', 'aeroplane', 'car', 'ferry' ];
     assert.deepStrictEqual(actual, traveller.getModesOfTransport());
   });
 
-  xit('should be able to get journeys by transport', function() {
+  it('should be able to get journeys by transport', function() {
     const actual = [
       journey1,
       journey2
@@ -62,7 +62,7 @@ describe('Traveller', function() {
     assert.deepStrictEqual(actual, traveller.getJourneysByTransport('train'));
   });
 
-  xit('should be able to get journeys over a certain distance', function() {
+  it('should be able to get journeys over a certain distance', function() {
     const actual = [
       journey3,
       journey4
